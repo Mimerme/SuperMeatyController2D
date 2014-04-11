@@ -12,12 +12,3 @@ How to use
 ======================
 Code may be a little bit messy, feel free to fix it up. All character controllers are in CharacterController2D.cs. Open the demo
 scene and try it for yourself.
-
-Plans for the future
-====================
--possible add wall jumping...possibly
--smoother "sudden stops" after letting go of key
--make the key release, hold, and down detection more flexible
--add sprinting
-
-Feel free to add anything you want
