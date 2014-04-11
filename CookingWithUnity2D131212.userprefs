@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Downloads/UnityCgShaderTutorials-master/Assets/Lesson4/DualTextureWipe.shader">
+    <Files>
+      <File FileName="../../Downloads/UnityCgShaderTutorials-master/Assets/Lesson3/SimpleTextureTwoSided.shader" Line="1" Column="1" />
+      <File FileName="../../Downloads/UnityCgShaderTutorials-master/Assets/Lesson4/DualTextureWipe.shader" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

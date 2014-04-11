@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Jump.cs">
+    <Files>
+      <File FileName="../CWU2dTest 2/Assets/Jump.cs" Line="25" Column="14" />
+      <File FileName="../CWU2dTest 2/Assets/MoveLeftRight.cs" Line="1" Column="1" />
+      <File FileName="../CWU2dTest 2/Assets/2dExample/Scripts/PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="../CWU2dTest 2/Assets/2dExample/Scripts/PlayerHealth.cs" Line="1" Column="1" />
+      <File FileName="../CWU2dTest 2/Assets/2dExample/Scripts/CameraFollow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Jump.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
