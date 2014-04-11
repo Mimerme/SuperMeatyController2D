@@ -13,11 +13,11 @@ public class CharacterController2D : MonoBehaviour {
 	public Vector2 sideLeft;
 	public float skinWidth = 0.1f;
 	public float InitalAcceleration = 500;
+	public float airspeed = 500;
 
 	Vector2 start;
 	RaycastHit2D hit;
 	void Start(){
-
 		//start = transform.position;
 		//start.y = transform.position.y - transform.localScale.y/2f;
 		}
@@ -33,7 +33,7 @@ public class CharacterController2D : MonoBehaviour {
 		Debug.DrawRay (start, -Vector2.up);
 		Debug.DrawRay (sides, Vector2.right);
 		Debug.DrawRay (sideLeft, -Vector2.right);
-		if (Physics2D.Raycast (start, -Vector2.up, 1).collider != null) {
+		if (Physics2D.Raycast (start, -Vector2.up, skinWidth).collider != null) {
 						grounded = true;
 				} else {
 			grounded = false;
@@ -88,15 +88,30 @@ public class CharacterController2D : MonoBehaviour {
 
 	}
 	void Move(){
+		//Move in air code
+	
+
 		//Move Left/Right Code
 		if (rigidbody2D.velocity.x >= 9 || rigidbody2D.velocity.x <= -9)
 			return;
 		
 		if (Input.GetAxisRaw ("Horizontal") < 0 && sidesHit != "left") {
+			if (Input.GetAxisRaw ("Horizontal") < 0 && grounded == false) {
+				rigidbody2D.AddForce(new Vector2(-airspeed * Time.deltaTime,0));
+
+			}else{
 			rigidbody2D.AddForce(new Vector2(-upSpead * Time.deltaTime,0));
-		}
+				}
+			}
 		if (Input.GetAxisRaw ("Horizontal") > 0 && sidesHit != "right") {
+			if (Input.GetAxisRaw ("Horizontal") > 0 && grounded == false) {
+				rigidbody2D.AddForce(new Vector2(airspeed * Time.deltaTime,0));
+				
+			}else{
 			rigidbody2D.AddForce(new Vector2(upSpead * Time.deltaTime,0));
+			}
 		}
+
+
 	}
 }
