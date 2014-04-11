@@ -12,3 +12,7 @@ How to use
 ======================
 Code may be a little bit messy, feel free to fix it up. All character controllers are in CharacterController2D.cs. Open the demo
 scene and try it for yourself.
+
+Demo
+======================
+https://dl.dropboxusercontent.com/u/63821265/WebPlayerBuilds/Builds.html
