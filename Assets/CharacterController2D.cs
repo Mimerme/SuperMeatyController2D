@@ -14,6 +14,7 @@ public class CharacterController2D : MonoBehaviour {
 	public float skinWidth = 0.1f;
 	public float InitalAcceleration = 500;
 	public float airspeed = 500;
+	public bool maxSpeed = false;
 
 	Vector2 start;
 	RaycastHit2D hit;
@@ -93,29 +94,38 @@ public class CharacterController2D : MonoBehaviour {
 	}
 	void Move(){
 		//Move in air code
-	
+		if (Input.GetAxisRaw ("Horizontal") < 0 && grounded == false && maxSpeed == true) {
+			rigidbody2D.AddForce(new Vector2(airspeed * Time.deltaTime,0));
+				}
+		else if (Input.GetAxisRaw ("Horizontal") > 0 && grounded == false && maxSpeed == true) {
+			rigidbody2D.AddForce(new Vector2(-airspeed * Time.deltaTime,0));
+		}
 
 		//Move Left/Right Code
-		if (rigidbody2D.velocity.x >= 9 || rigidbody2D.velocity.x <= -9)
-			return;
+		if (rigidbody2D.velocity.x >= 9 || rigidbody2D.velocity.x <= -9) {
+						maxSpeed = true;
+				} else {
+			if(maxSpeed == true){
+				maxSpeed = false;
+			}
+				}
 		
 		if (Input.GetAxisRaw ("Horizontal") < 0 && sidesHit != "left") {
-			if (Input.GetAxisRaw ("Horizontal") < 0 && grounded == false) {
+			if (maxSpeed == false && grounded == false) {
 				rigidbody2D.AddForce(new Vector2(-airspeed * Time.deltaTime,0));
 
-			}else{
+			}else if(maxSpeed == false){
 			rigidbody2D.AddForce(new Vector2(-upSpead * Time.deltaTime,0));
 				}
 			}
 		if (Input.GetAxisRaw ("Horizontal") > 0 && sidesHit != "right") {
-			if (Input.GetAxisRaw ("Horizontal") > 0 && grounded == false) {
+			if (maxSpeed == false && grounded == false) {
 				rigidbody2D.AddForce(new Vector2(airspeed * Time.deltaTime,0));
 				
-			}else{
+			}else if(maxSpeed == false){
 			rigidbody2D.AddForce(new Vector2(upSpead * Time.deltaTime,0));
 			}
 		}
-
 
 	}
 }

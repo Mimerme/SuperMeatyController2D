@@ -317,6 +317,7 @@ MonoBehaviour:
   skinWidth: .00100000005
   InitalAcceleration: 450
   airspeed: 2000
+  maxSpeed: 0
 --- !u!1 &1187224366
 GameObject:
   m_ObjectHideFlags: 0
