@@ -19,6 +19,9 @@ Post feedback on this reprository or on this topic on Reddit: http://www.reddit.
 
 Demo
 ======================
+Version 1:
 https://dl.dropboxusercontent.com/u/63821265/WebPlayerBuilds/Builds.html
 
+Version 2 *Bug Fixes*:
+https://dl.dropboxusercontent.com/u/63821265/WebPlayerBuilds/Builds.html
 
