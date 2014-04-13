@@ -31,9 +31,13 @@ public class CharacterController2D : MonoBehaviour {
 		start = transform.position;
 		start.y = transform.position.y - transform.localScale.y/2f - 0.1f;
 		Debug.DrawRay (start, -Vector2.up);
+		Debug.DrawRay (new Vector2(start.x - transform.localScale.x/2, start.y), -Vector2.up);
+		Debug.DrawRay (new Vector2(start.x + transform.localScale.x/2, start.y), -Vector2.up);
 		Debug.DrawRay (sides, Vector2.right);
 		Debug.DrawRay (sideLeft, -Vector2.right);
-		if (Physics2D.Raycast (start, -Vector2.up, skinWidth).collider != null) {
+
+
+		if (Physics2D.Raycast (start, -Vector2.up, skinWidth).collider != null || Physics2D.Raycast (new Vector2(start.x + transform.localScale.x/2, start.y), -Vector2.up, skinWidth).collider != null || Physics2D.Raycast (new Vector2(start.x - transform.localScale.x/2, start.y), -Vector2.up, skinWidth).collider != null) {
 						grounded = true;
 				} else {
 			grounded = false;
