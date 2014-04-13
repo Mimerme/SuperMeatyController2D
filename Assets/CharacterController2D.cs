@@ -44,13 +44,13 @@ public class CharacterController2D : MonoBehaviour {
 				}
 
 	
-		if (Input.GetKeyUp(KeyCode.A)) {
+		if (Input.GetKeyUp(KeyCode.A) && grounded == true) {
 			//Detect when certain keys are released to reset velocity
 			//Reset the velocity to a number close to 0 to make a sudden stop, but ease out to fell smoother
-			rigidbody2D.velocity = new Vector2(-3,0);
+			rigidbody2D.velocity = new Vector2(-2,0);
 		}
-		if (Input.GetKeyUp(KeyCode.D)) {
-			rigidbody2D.velocity = new Vector2(3,0);
+		if (Input.GetKeyUp(KeyCode.D) && grounded == true) {
+			rigidbody2D.velocity = new Vector2(2,0);
 		}
 		//Jumping Trigger
 		if (Input.GetKeyDown (KeyCode.Space)) {
